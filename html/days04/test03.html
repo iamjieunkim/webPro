@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            border: 1px solid #d8d6d6;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+
+            background-color: #d8d6d6;
+
+            overflow: hidden;
+        }
+        ul li a{
+            color: white;
+            display: block;
+            text-align:center;
+            padding: 16px;
+
+            text-decoration: none;
+        }
+
+
+        ul li:nth-child(1){
+            background-color: green;
+        }
+
+        ul li a:hover:not(.active){
+            background-color: #989898;
+            color: aquamarine;
+
+        }
+
+        ul li{
+            float: left;
+        }
+
+        ul li:nth-child(4){
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <!-- 3. html 목록 태그를 사용하여 Navigation Menu 만들기(  "문제3_결과.png" ) -->
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+</body>
+</html>

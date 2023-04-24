@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    <pre>
+        1. https://emmet.io
+        2. zen coding -> emmet: html, xml, xsl 편집을 빠르게 코딩.
+        3. ctrl+e 누르면 실행이 된다.
+    </pre>
+
+    <!-- div -->
+    <div></div>
+    <foo></foo>
+
+    <!-- 중첩연산자 >(자식) +(형제(같은, 동일한 수준)의 레벨을 만드는 요소) ^(상위레벨, 부모레벨) () -->
+    <!-- div>ul -->
+    <div>
+        <ul></ul>
+    </div>
+
+    <div>
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+
+    <!-- div+ul -->
+    <div></div>
+    <ul></ul>
+
+    <!-- div+ul+ol+p -->
+    <div></div>
+    <ul></ul>
+    <ol></ol>
+    <p></p>
+
+    <!-- div>ul+p -->
+    <div>
+        <ul></ul>
+        <p></p>
+    </div>
+
+    <!-- div>ul^p -->
+    <div>
+        <ul></ul>
+    </div>
+    <p></p>
+
+
+    <!-- div+div>p>span -->
+    <div></div>
+    <div>
+        <p><span></span></p>
+    </div>
+    <em><blockquote></blockquote></em>
+
+    <!-- div>ul>li -->
+    <!-- div>ul>li+li+li+li+li -->
+    <div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <!-- div>ul>li*5(횟수) -->
+    <div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+
+    <!-- div>header>ul>li*2>a^^^footer>p -->
+    <div>
+        <header>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </header>
+        <footer>
+            <p></p>
+        </footer>
+    </div>
+
+    <!-- div>dl>(dt+dd)*3 -->
+    <div>
+        <dl>
+            <dt></dt>
+            <dd></dd>
+            <dt></dt>
+            <dd></dd>
+            <dt></dt>
+            <dd></dd>
+        </dl>
+    </div>
+
+    <!-- ul>(li{홍길동})*5 -->
+    <!-- ul>li*5>{홍길동} -->
+    <!-- ul>li*5>{홍길동-$} -->
+    <!-- ul>li*5>{홍길동-$$$} -->
+    <ul>
+        <li>홍길동</li>
+        <li>홍길동</li>
+        <li>홍길동</li>
+        <li>홍길동</li>
+        <li>홍길동</li>
+    </ul>
+    
+    <!-- ul>li*5>{홍길동-$$$} -->
+    <ul>
+        <li>홍길동-001</li>
+        <li>홍길동-002</li>
+        <li>홍길동-003</li>
+        <li>홍길동-004</li>
+        <li>홍길동-005</li>
+    </ul>
+    
+
+    <!-- ul>li.item*5>{item-$} -->
+    <ul>
+        <li class="item">item-1</li>
+        <li class="item">item-2</li>
+        <li class="item">item-3</li>
+        <li class="item">item-4</li>
+        <li class="item">item-5</li>
+    </ul>
+
+    <!-- ul>li.item$*5>{item-$} -->
+    <ul>
+        <li class="item1">item-1</li>
+        <li class="item2">item-2</li>
+        <li class="item3">item-3</li>
+        <li class="item4">item-4</li>
+        <li class="item5">item-5</li>
+    </ul>
+
+
+    <!-- ul>li.item$@-*5>{item-$@-} -->
+    <!-- @-를 붙이면 역순으로 순서가 붙는다. -->
+    <ul>
+        <li class="item5">item-5</li>
+        <li class="item4">item-4</li>
+        <li class="item3">item-3</li>
+        <li class="item2">item-2</li>
+        <li class="item1">item-1</li>
+    </ul>
+
+    <!-- ul>li.item$@-*5>{item-$@3} -->
+    <ul>
+        <li class="item5">item-3</li>
+        <li class="item4">item-4</li>
+        <li class="item3">item-5</li>
+        <li class="item2">item-6</li>
+        <li class="item1">item-7</li>
+    </ul>
+
+    <!-- id 속성, class 속성 값 기타 속성  -->
+    <!-- <div id="demo" class="active"></div> -->
+    <!-- .클래스명 주면 div class="준 클래스명 "이런식으로 만들어 진다. -->
+    <div id="demo" class="active"></div>
+
+
+    <div id="demo" class="active box ss18"></div>
+
+    <!-- #demo.active -->
+    <div id="demo" class="active"></div>
+
+    <!-- #demo.active.box.ss18 -->
+    <div id="demo" class="active box ss18"></div>
+
+    <!-- td[속성명="속성값"] -->
+    <!-- td[title="hello world~"][colspan=3] -->
+    <!-- td[title="hello world~" colspan=3] -->
+    <td title="hello world~" colspan="3"></td>
+
+    <td title="hello world~" colspan="3"></td>
+
+    <!-- a[href="http://www.sist.co.kr" class="16" target="_blank"]>{쌍용교육센터}^br -->
+    <a href="http://www.sist.co.kr" class="16" target="_blank">쌍용교육센터</a><br>
+
+    <!-- a[href=""]>{click}+b{here} -->
+    <a href="">click<b>here</b></a>
+
+    <!-- p>{click} -->
+    <!-- p{click} -->
+    <!-- p>{click}+a{here}{to continue} -->
+    <!-- p>{click}+a{here}+{to continue} -->
+    <p>click<a href="">here</a>to continue</p>
+    
+
+    <hr>
+    <!-- div.wrap>div.content -->
+    <div class="wrap">
+        <div class="content"></div>
+    </div>
+
+    <div class="wrap"></div>
+
+    <!-- .wrap>.content -->
+    <div class="wrap">
+        <div class="content"></div>
+    </div>
+
+    <!-- em>span.info -->
+    <em><span class="info"></span></em>
+
+    <!-- em>.info -->
+    <em><span class="info"></span></em>
+
+    <!-- ul>li.item*3 -->
+    <ul>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+    </ul>
+
+    <!-- ul>.item*3 -->
+    <ul>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+    </ul>
+
+    <!-- lorem -->
+
+    <!-- ul>li*5>lorem -->
+    <ul>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit officiis, hic aut saepe iste officia labore eius sint natus doloremque quod placeat odio accusantium? Incidunt quis minima expedita animi adipisci?</li>
+        <li>Neque, temporibus exercitationem provident suscipit consectetur alias maxime saepe delectus! A, illo cumque magni explicabo exercitationem fugiat quia, quibusdam voluptas eveniet, labore beatae? Exercitationem incidunt voluptate, quasi aliquid necessitatibus illum!</li>
+        <li>Id nihil possimus in, laborum odio dolores voluptas distinctio similique nostrum saepe, architecto sunt illo. Repudiandae voluptatibus ab et labore! Aliquam atque assumenda nisi error iusto, commodi cum qui velit.</li>
+        <li>Optio veniam quaerat hic magni libero architecto, suscipit quis fugit ipsum reiciendis non doloremque aut id necessitatibus placeat neque impedit dolor. Assumenda distinctio minima culpa consectetur inventore atque dolor magnam?</li>
+        <li>Officiis neque ducimus autem et odio sint numquam. Porro blanditiis delectus aperiam quam ipsa accusamus nulla nesciunt, corporis eum necessitatibus, neque pariatur rerum magni voluptatum similique inventore eius saepe eveniet?</li>
+    </ul>
+
+    <!-- ul>li*5>lorem5 -->
+    <ul>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Exercitationem nulla tenetur rem hic.</li>
+        <li>Quasi, quidem? Voluptatibus, odit quam!</li>
+        <li>Asperiores fuga rem quo in.</li>
+        <li>Repudiandae cumque amet quae quidem?</li>
+    </ul>
+
+    <!-- lorem숫자 몇단어를 랜던하게 넣을껀지 lorem3은 세단어를 랜던해서 집어넣겠다. -->
+    <!-- ul.generic-list>lorem10.item*4 -->
+    <ul class="generic-list">
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, tempora.</li>
+        <li>Ex modi in omnis dolore explicabo, corporis delectus fuga atque.</li>
+        <li>Tempore id eligendi architecto quod! Quidem deserunt animi aspernatur ipsam?</li>
+        <li>Harum iusto quod omnis ea veniam modi dolorum rerum excepturi.</li>
+    </ul>
+
+    
+
+</body>
+</html>
