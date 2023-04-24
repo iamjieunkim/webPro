@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>"2023. 4. 20.-오후 3:14:14"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+    p{
+        /* text-indent: 50px; */
+
+    }
+</style>
+<style>
+    h2{
+        letter-spacing: 5px;
+    }
+    h3{
+        letter-spacing: -2px;
+    }
+</style>
+<style>
+    p{
+        /* line-height: 0.7; */
+        /* line-height: 1.8; */
+    }
+</style>
+<style>
+    div{
+        border:1px solid red;
+        /* word-spacing: 단어와 단어 사이의 간격; */
+        /* word-spacing: 10px; */
+        /* word-spacing: -2px; */
+
+        /* 텍스트의 줄바꿈을 비활성화 하는 방법 */
+        white-space: nowrap;
+    }
+</style>
+<style>
+    p#wb{
+        border: solid 1px blue;
+        width: 200px;
+
+        /* 너비 보다 한 단어가 더 길더라.
+        다음 라인으로 줄바꿈을 강제로 시키자 */
+
+        word-wrap: break-word;
+        
+        /* 라인의 끝에 도달할 때 단어 출력...끊어서 출력 */
+
+        /* 한단어가 너무 길어서 단어를 그냥 끊어서 다음라인에 개행에서 사용하려고 하려면 밑에껄 사용하면 된다. */
+        word-break: break-all;
+    }
+</style>
+</head>
+<body>
+<!-- p#wb>lorem -->
+<p id="wb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, quia ratione totam tempore, porro possimus ipsa exercitationem culpa aliquam quos, impedit odio incidunt placeat molestiae sit? Aperiam veritatis distinctio quibusdam.</p>
+
+<!-- <h3>ex15.html</h3> -->
+
+<h2>This is heading 1</h2>
+<h3>This is heading 2</h3>
+
+
+<pre>
+    [텍스트 간격]
+    text-indent : 첫 번째 라인에 들여쓰기
+    letter-spacing : 문자와 문자 사이의 간격
+    line-height : 라인과 라인 사이의 간격
+    word-spacing : 단어와 단어 사이의 간격5
+    white-space : 공백을 나타내는 속성(공백을 처리하는 방법을 지정하는 속성)
+    word-break
+    word-wrap
+</pre>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Cumque est maiores perferendis velit, ipsum expedita deserunt cupiditate reiciendis molestias saepe? Eius,
+     vel itaque? Ut quae quia magnam, odio obcaecati laboriosam.</p>
+
+<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla minima amet repellat impedit exercitationem reiciendis, eumcorporislaboriosamutfaceredolorecorruptinequeodiovoluptatibuslaborumomnisvoluptatesmagni! Hic?</div>
+
+</body>
+</html>

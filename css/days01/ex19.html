@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>"2023. 4. 20.-오후 4:34:57"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+    /* :의사클래스(요소에 특정 상태를 나타내는 의사클래스) 링크 상태 순서*/
+    /* link->visited->hover->active */
+    /*
+    a:link{    /* 미방문상태 
+        text-decoration: none;
+    }
+    a:visited{      /* 방문 상태 
+        text-decoration: none;
+    }*/
+
+    
+    /*
+    a:hover{ /*사용자가 마우스를 올려놓은 상태
+        text-decoration: underline;
+    }
+    a:active{ /*클릭하는 상태
+        text-decoration: underline;
+    }*/
+
+    a:link, a:visited{
+        text-decoration: none;
+        border: 2px solid green;
+
+        color:black;
+        background-color: white;
+        padding:10px 20px;
+    }
+
+    a:hover, a:active{
+        background-color: red;
+        color:white;
+    }
+
+</style>
+</head>
+<body>
+<h3>CSS 링크 + 스타일 지정 == 스타일링 링크</h3>
+
+<!-- a[href=# target=_blank]{This is a link} -->
+<a href="#" target="_blank">This is a link</a>
+
+</body>
+</html>

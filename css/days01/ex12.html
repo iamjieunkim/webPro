@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>"2023. 4. 20.-오후 2:26:03"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+    body{
+        /* 텍스트 색상 */
+        color:blue;
+        background-color: lightgray;
+    }
+    h3{
+        /* color:rgb(0, 255, 0);  */
+        color: white;
+        background-color: black;
+
+        /* 텍스트 정렬 */
+        text-align: center;
+    }
+    p#p1{
+        border:1px solid black;
+        padding: 5px;
+        width: 250px;
+        height: 100px;
+
+        text-align: justify;
+        /* 출력되는 텍스트의 행의 끝을 나란히 맞추겠다. */
+        /* justify가 중앙 정렬 그 한글에서 중앙정렬 누르면 양쪽 간격이 딱 맞는대신에 중간에 공백이 좀 긴거 몇개 있는거 그걸 정의하는 게 justify다 */
+
+        overflow: hidden;
+        /* hidden 넘쳤지만 보이지는 않음 */
+
+        
+    }
+
+    div{
+        color: red;
+        direction: rtl;
+        /* rtl: 오른쪽 -> 왼쪽으로 출력 */
+        /* ltr 왼쪽-> 오른쪽으로 출력 */
+    }
+
+    pre{
+        font-family: d2coding;
+    }
+
+    /* 텍스트에서 이미지의 수직(세로) 정렬 설정 : :vertical-algin */
+    img.a{vertical-align: baseline;}
+    img.b{vertical-align: text-top;}
+    img.c{vertical-align: text-bottom;}
+    img.d{vertical-align: sub;}
+    img.e{vertical-align: super;}
+
+</style>
+</head>
+<body>
+    <h3>ex12.html- 텍스트</h3>
+
+    <pre>
+        [css 텍스트 서식 지정.]
+        1.색상: 표준색상명(140개), #16진수, rgb(,,,)값
+        2.정렬: text-align ***
+               text-align-last
+               direction
+               unicode-bidi 텍스트의 방향을 변경하는 속성
+               vertical-align 수직 정렬을 설정하는 속성 ***
+        3.장식 ex13.html
+        4.변환 ex14.html
+        5.간격 ex15.html
+        6.그림자 ex16.html
+    </pre>
+
+    <div>Lorem ipsum dolor sit amet.</div>
+
+    <!-- p#p1>lorem -->
+    <p id="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam nisi totam fugiat, architecto ab saepe repellat laudantium deleniti dicta doloribus sunt at sapiente enim animi, repudiandae eligendi nemo! Ut, repellendus?</p>
+
+  <!--   <!-- p*5>lorem5 -->
+    <p>Lorem ipsum <img src="../images/sqpurple.gif" class="a" style="width:9px;height:9px"> dolor sit amet.</p>
+    <p>Corporis adipisci <img src="../images/sqpurple.gif" class="b" style="width:9px;height:9px"> ut eum fuga.</p>
+    <p>Nulla impedit <img src="../images/sqpurple.gif" class="c" style="width:9px;height:9px"> illum ipsa cupiditate?</p>
+    <p>Ratione impedit adipisci <img src="../images/sqpurple.gif" class="d" style="width:9px;height:9px"> eos voluptatem.</p>
+    <p>Delectus doloremque saepe <img src="../images/sqpurple.gif" class="e" style="width:9px;height:9px"> optio iste?</p>
+
+    
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>"2023. 4. 20.-오전 11:15:15"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<style>
+    body{
+        /* background-color: red; */
+        /* background-image: url('images/paper.gif'); vscode*/
+        /* background-image: url('../images/paper.gif'); eclispe*/
+
+
+        /* background-image: url('images/img_tree.gif');
+        background-image: url('../images/img_tree.gif'); */
+
+
+        /* background-image: url('images/img_tree.gif'); */
+
+        /* background-repeat: no-repeat; */
+        /* 배경이미지를 반복하지 않겠다. */
+
+        /* background-repeat: repeat-x; */
+        /* x축으로 반복하겠다. */
+
+        /* background-repeat: repeat-y; */
+        /* y축으로 반복하겠다. */
+
+        /* background-position: right bottom; */
+        /* background-position: right top; */
+        
+        /* 스크롤을 해도 배경은 그대로 지정한 위치에 위치하게 하는 설정 */
+        /* background-attachment: fixed; */
+
+
+        /* background: color image() repeat attachment position; */
+        background: url('images/img_tree.gif') no-repeat right top fixed;
+        /* background: url('../images/img_tree.gif') no-repeat right top fixed; */
+
+        
+    }
+</style>
+<style>
+    div#top{
+        /* border: 1px solid gray; */
+        border-width: 1px;
+        border-style: solid;
+        border-color: gray;
+        /* 
+        테두리 속기(약식)
+        border: 1px solid gray;
+         */
+
+         width: 25px;
+         height: 25px;
+
+         position: fixed;
+         right: 5px;
+         bottom: 5px;
+    }
+
+    /* :의사클래스(상태) */
+    #top:hover{
+        background-color: black;
+        color: yellow;
+        font-weight: bold;
+        cursor: pointer;
+    }
+</style>
+<body>
+<h3>ex05_02.html</h3>
+
+
+<!-- #top{top}+h3{css 배경이미지}+lorem+p*50>{.} -->
+<div id="top" onclick="top_click()">top</div>
+<h3>css 배경이미지</h3>
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores qui labore veritatis debitis saepe ex numquam autem aperiam eius laudantium quae, ratione officiis alias, incidunt impedit architecto error rerum enim.
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+
+<script>
+    function top_click() {
+        // window.alert("test");
+        // window는 최상위 객체이기 때문에 생략해도 상관없다.
+        // alert("test");
+
+        // window.document.body
+        document.body.scrollTop = 0;
+        // window는 최상위 객체이기 때문에 생략해도 상관없다.
+
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+</body>
+</html>

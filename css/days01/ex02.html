@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>"2023. 4. 20.-오전 9:23:33"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<!-- 외부 CSS 적용방법 -->
+<link href="ex02_style.css" rel="stylesheet">
+<style>
+    /* 내부 CSS 적용 방법 */
+    /* 스타일을 적용할 대상 -> 선택자(selector) */
+    p{
+        color: red;
+    }
+    #hthree{ /*아이디 명 앞에는 #을 붙여줘야 한다.*/
+        color: blue;
+        text-align: center;
+        border: 1px solid gray;
+    }
+
+
+    /* hn 첫번째, p 첫번째, div 첫번째 */
+
+    .first{
+        background-color: yellow;
+    }
+
+    p.first{
+        /* 태그 점수 + 클래스명 점수 */
+        background-color: blue;
+    }
+    p{ /* 태그명 */
+        color:blue;
+    }
+
+    /* 같은 태그일 경우에는 나중에 밑에 작성한 걸로 값이 적용이 된다. */
+    p{ /* 태그명 */
+        color:red;
+    }
+
+</style>
+<style>
+    /* 웹페이지에 있는 모든 요소를 선택하겠다. */
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    /* 그룹화 선택자 */
+    h1, h2, h3, h4, h5, h6{
+        border: 1px solid gray;
+    }
+    /* h1{
+        border: 1px solid gray;
+    }
+    h2{
+        border: 1px solid gray;
+    }
+    h3{
+        border: 1px solid gray;
+    }
+    h4{
+        border: 1px solid gray;
+    }
+    h5{
+        border: 1px solid gray;
+    }
+    h6{
+        border: 1px solid gray;
+    } */
+</style>
+</head>
+<body>
+    
+
+    <!-- h$*6>{Hello World} -->
+    <h1 class="first">Hello World</h1>
+    <!-- 인라인식 CSS 적용방법 -->
+    <h2 style="color: gray;">Hello World</h2>
+    <h3 id="hthree">Hello World</h3>
+    <h4>Hello World</h4>
+    <h5 class="box">Hello World</h5>
+    <h6>Hello World</h6>
+
+    <!-- p>h1>lorem3 -->
+    <p>
+        <h1>Lorem, ipsum dolor.</h1>
+    </p>
+
+    <!-- p*5>lorem7 -->
+    <p class="first">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+    <p>Nobis rem necessitatibus quia delectus, quos quibusdam.</p>
+    <p>Sed minus fugiat at adipisci. Eaque, consequuntur!</p>
+    <p class="box">Itaque veritatis, facilis est illum sapiente officiis?</p>
+    <p>Temporibus neque ducimus minima deleniti nisi earum?</p>
+
+    <!-- div*5>lorem5 -->
+    <!-- <div class="first" class="box">Lorem ipsum dolor sit amet.</div> -->
+    <!-- <div class="first box">Lorem ipsum dolor sit amet.</div> 위아래 같은 표현이다 class 안에 first와 box라는 값을 넣겠다. -->
+    <div>At obcaecati impedit fugiat ducimus!</div>
+    <div>Architecto quam aliquid fugiat magni?</div>
+    <div>Blanditiis sit nulla repellendus ea!</div>
+    <div>Quos veniam voluptatum fuga repudiandae!</div>
+</body>
+</html>
