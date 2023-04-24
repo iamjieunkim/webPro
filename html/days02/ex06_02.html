@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h3>html-링크 - 하이퍼링크</h3>
+	<!-- 
+-링크를 클릭하면 다른 문서로 이동하는 것을 하이퍼링크라고 한다.
+-링크 위에 마우스를 올리면 작은 손모양으로 바뀐다.
+ -->
+	<!-- A link if the href attribute is present.
+ [href 속성]
+ and the target for a link if the name attribute is present
+ [name 속성]-링크 대상 -->
+
+	<a href="https://www.naver.com">naver</a>
+	<br>
+
+	<!-- 기준 http://localhost/webPro/html/days02/ -->
+	<!-- filename만 줬다 -> 이렇게 나타내는 것을 상대경로(기준이 어딘지에 따라서 경로를 찾아가는 것을)라고 한다. (이 반대말은 절대경로이다.) -->
+	<a href="ex01.html">ex01.html</a>
+	<br>
+	<!-- .현재디렉토리 -->
+	<!-- ..상위 디렉토리 -->
+	<a href=".ex01.html">ex01.html</a>
+	<br>
+	<!-- 현재 있는 ex01.html파일을 디렉토리 걸겠다는 뜻 -->
+	<!-- <a href="uri를 줘야한다."></a> -->
+
+	<!-- days01/ex01.html -->
+	<!-- 절대경로, 상대경로 -->
+	<a href="http://localhost/webPro/html/days01/ex01.html">ex01.html</a>
+	<br>
+	<a href="../../ex02.html">ex01.html</a>
+	<br>
+	<!-- ../은 상위 폴더로 이동하겠다. -->
+	<a href="../days01/ex01.html">ex01.html</a>
+	<br>
+
+	<!-- 문제 index.html 파일을 상대경로로 표현해서, index.html 파일을 클릭하면 열리도록 상대경로로 표현하기 -->
+	<a href="http://localhost/webPro/index.html">index.html</a><br>
+	
+	<a href="../../index.html">index.html</a><br>
+
+</body>
+</html>
