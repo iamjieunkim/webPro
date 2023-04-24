@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body{
+            font-family: Arial, Helvetica, sans-serif, d2coding;
+        }
+
+        /* 
+        div#아이디명{
+        } */
+        div#header{
+            background-color: #666;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+        }
+        div#footer{
+            background-color: #777;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 25px;
+        }
+    </style>
+    <style>
+        div#nav{
+            background-color: #ccc;
+            width: 30%;
+            padding: 20px;
+            height: 300px;
+
+            float: left;
+        }
+
+        div#artcle{
+            background-color: #f1f1f1;
+            width: 70%;
+            padding: 20px;
+            min-height: 300px;
+
+            float: left;
+
+        }
+    </style>
+   
+    <style>
+    div#section::after{
+        content:"";
+        display: table;
+        clear: both;
+    }
+    </style>
+</head>
+<body>
+    <h2>div(배치, layout) + css</h2>
+    <!-- #header>h2>{Cites - 시멘틱 태그(semetic elements} -->
+    <div id="header">
+        <h2>Cites - 시멘틱 태그(semetic elements)</h2>
+    </div>
+    <!-- #section>(#nav>ul>li*3>a[herf=#]) -->
+    <!-- #section>(#nav>ul>li*3>a[herf=#])+(#artcle>(h2>{London}^p*2>lorem)*3) -->
+    <div id="section">
+        <div id="nav">
+            <ul>
+                <li><a href="">London</a></li>
+                <li><a href="">Paris</a></li>
+                <li><a href="">Seoul</a></li>
+            </ul>
+        </div>
+        <div id="artcle">
+            <h2>London</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet labore repellendus, fugit, debitis reiciendis eaque iure provident vel architecto est accusantium obcaecati animi doloribus. Ex quo iste quisquam quod nesciunt.</p>
+            <p>Eaque excepturi dolorum sequi, aliquam id facilis consequatur dolore tempora perspiciatis sit eum nobis tempore dicta asperiores aperiam? Quae modi vitae impedit repellendus beatae cupiditate error perferendis corporis maiores suscipit.</p>
+            <h2>Paris</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nihil laborum illum consectetur reprehenderit non corporis labore. Inventore veniam similique, cupiditate nobis natus temporibus, obcaecati consequuntur nisi excepturi voluptatibus eius.</p>
+            <p>Porro pariatur blanditiis eveniet, labore odit similique error iste dolorum? Quod, quo natus quibusdam labore placeat repudiandae aut commodi quidem minus nam? Vitae repellendus voluptatibus perferendis cupiditate ducimus alias debitis?</p>
+            <h2>Seoul</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam fuga ad pariatur? Repudiandae mollitia aperiam, enim nobis perferendis placeat voluptas tempore quaerat eos perspiciatis dolorem nulla quasi veniam fugiat ipsum!</p>
+            <p>Molestiae, et aliquam. Totam molestias incidunt, quas pariatur nisi quaerat laudantium quis necessitatibus a? Repellendus, amet? Eveniet officiis earum quas quos. Sint accusantium velit ipsum iste non iure provident asperiores.</p>
+        </div>
+    </div>
+    <!-- <div style="clear:left"></div> -->
+    <!-- 위에 구문과 완전 똑같은 코드 -->
+
+<!-- #footer>h2>{Footer} -->
+<div id="footer">
+    <h2>Footer</h2>
+</div>
+</body>
+</html>
