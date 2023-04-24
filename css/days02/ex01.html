@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>"2023. 4. 20.-오후 5:36:46"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    .pagination{
+        width: 50%;
+        /* background-color: red; */
+        margin: 0 auto;
+        /* 0 auto는 보통 가운데 정렬의 의미를 가지고 있음 */
+        text-align: center;
+
+        overflow: auto;
+    }
+    /* _(후손) +(직계) */
+    .pagination a{
+        text-decoration: none;
+        color: black;
+
+        float: left;
+        width: 8.3%;
+        text-align: center;
+    }
+    /*. :의사클래스 (특정상태) */
+    .pagination a:hover{
+        background-color: #ddd;
+    }
+
+    .pagination a.active{
+        background-color: dodgerblue;
+        color: white;
+    }
+</style>
+</head>
+<body>
+<h3>ex01.html - css 페이징 처리</h3>
+
+<!-- .pagination>a[href=#]*12>{$} -->
+<div class="pagination">
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#" class="active">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">7</a>
+    <a href="#">8</a>
+    <a href="#">9</a>
+    <a href="#">10</a>
+    <a href="#">&gt;</a>
+    <a href="#">&raquo;</a>
+</div>
+
+<!-- script태그는 어디 있던지 상관이 없다. -->
+<script>
+// $("css selecter")
+//jquery click()메서드 
+//jquery not() 메서드
+$(".pagination a").click(function () {
+    // alert("test");
+    $(".pagination a").not(this).removeClass("active");
+    // 모든 a태그에 있는 클래스를 제거하겠다는 뜻
+
+    // 페이지를 누를때마다 엑티브 클래스를 추가하겠다는 뜻
+    $(this).addClass("active")
+});
+</script>
+</body>
+</html>

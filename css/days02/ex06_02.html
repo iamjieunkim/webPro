@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>"2023. 4. 21.-오후 12:08:15"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+    .box{
+        border: 1px solid gray;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <!-- <div>Box - 1</div> -->
+<script>
+    //js를 사용해서 동적으로 div요소*5개를 생성
+    // document.createElement(tagName)
+    var div = document.createElement("div");
+    //<body>요소에 자식으로 div요소추가
+        
+    // div.innerText = "Box - 1";
+    // div.style.border = "1px solid gray";
+    // div.style.width = "100px";
+    // div.style.height = "100px";
+    // // div.style.text-align = "center";
+    // // -가 중간에 있던거는 다 -를 빼주고 연결할때 뒤에 있던 문자의 맨 앞 글자를 항상 대문자로 바꿔서 적어주기!!!!
+    // div.style.textAlign = "center";
+
+    //.box 클래스를 div 태그에 추가
+    //jQuery class 추가/삭제 메서드 ? addClass(), remove()
+    //js
+    //div.classList.add("box");
+    div.className = "box";
+
+
+    document.body.appendChild(div);
+</script>
+</body>
+</html>

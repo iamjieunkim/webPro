@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>"2023. 4. 21.-오전 9:36:09"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+    ul li{
+       background-color: red;
+       display: inline; 
+    }
+
+    /* 
+    span{
+        background-color: blue;
+        display: block;
+    }
+     */
+
+    span{
+        background-color: blue;
+        width: 200px;
+        /* width라는 속성이 적용이 안되는 이유는 inline모드이기 떄문에 width속성이 의미가 없다. */
+        /* 그래서 display속성에 inline-block모드를 적용시켜 주면 width를 쓸 수 있게 된다. */
+        display: inline-block;
+        /* inline 속성을 유지하되 블럭의 width속성을 적용시키겠다. */
+        /* display: block; */
+    }
+
+</style>
+</head>
+<body>
+<h3>ex04.html - css display 속성</h3>
+
+<pre>
+    [display 속성]
+    1. 레이아웃을 제어하기 위한 가장 중요한 css 속성이다.
+    2. 기본값 : block, inline
+        block - div, p, header, hn, hr 등등
+          ㄴ특징 : 항상 새로운 라인에서 시작한다
+                 부모 너비의 사용가능한 전체 너비로 잡힌다.(부모너비의 사용가능한 100% 너비로 잡힌다.)
+        inline - a, img, span 등등
+          ㄴ특징 : 새로운 라인에서 시작하지 않는다.
+                 너비는 안에 필요한 내용(content)만큼만 차지한다.(잡힌다.)
+    3. 요소가 표시되는 여부를 지정하는 속성.
+    4. display:none;
+       요소를 삭제하거나 또는 숨기기 위해서 display속성 none을 준다.
+       요소를 삭제 또는 숨기기 + javascript
+    5. li태그 -> 블럭모드
+       너비가 전체로 잡힌다.(너비가 부모의 100%로 잡힌다.)
+       [          100%          ]
+       li{
+        display:inline;
+       }
+</pre>
+<!-- ul>li*3>a[href=#]>lorem1 -->
+<ul>
+    <li><a href="#">Lorem.</a></li>
+    <li><a href="#">Amet?</a></li>
+    <li><a href="#">Repellat?</a></li>
+</ul>
+<hr>
+<!-- span*3>lorem1 -->
+<span>Lorem.</span>
+<span>Minus!</span>
+<span>Harum!</span>
+</body>
+</html>
