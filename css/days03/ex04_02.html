@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>"2023. 4. 24.-오전 11:36:02"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+    .center{
+        border:3px solid green;
+        /* 텍스트가 가운데로 이동하게 하는 작업 */
+        text-align: center;
+        width: 50%;
+        /* div가 가운데로 이동하게 하는 작업 */
+        margin: auto;
+
+        /* height: 200px; */
+        
+        /* 첫번째 수직 가운데 정렬하는 방법 : 패딩에 의해서 가운데 정렬 하는 방법 */
+        /* padding: 70px 0 ; */
+
+        /* 두번째 방법 : height라는 속성값하고 동일한 값을 line-height(줄간격)이라는 속성값으로 지정하면 된다. */
+        /* 높이랑 줄간격이랑 똑같이 주면 수직 중앙 정렬이 된다. */
+        
+        line-height: 200px;
+        height: 200px; 
+       
+        
+    }
+
+    .center p {
+            line-height: 1.5;
+            display: inline-block;
+            vertical-align: middle;
+    }
+</style>
+</head>
+<body>
+    <h3>수직으로 가운데 정렬 하기</h3>
+    <!-- .center>p{hello world} -->
+<div class="center">
+    <p>hello world</p>
+</div>
+</body>
+</html>

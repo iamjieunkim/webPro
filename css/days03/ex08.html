@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>"2023. 4. 24.-오후 2:10:50"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+    input[name='search']{
+        width: 30%;
+        padding: 12px 20px;
+        margin: 8px 0;
+
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+
+        background: white url("/Users/kimjieun/Downloads/Studyfile/Web/복습_days05/images/searchicon.png") no-repeat 10px center;
+        /* background: white url("../images/searchicon.png") no-repeat 10px center; */
+
+        /* 돋보기사진이랑 글씨랑 겹치지 않게 하도록 하기 위해서 */
+        padding-left: 40px;
+
+        /* width: 30%; -> 100%으로 전환할때 조금 부드럽게 바뀌었으면 좋겠다. */
+        transition: width 0.5s ease;
+    }
+
+    input[name='search']:hover{
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+<form action="">
+    <input type="text" name="search" placeholder="Search..">
+</form>
+</body>
+</html>

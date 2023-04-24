@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>"2023. 4. 24.-오후 12:22:10"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+    p:first-child{
+        /* 첫번째 자식인 p태그의 글씨색을 파랑색으로 주겠다. body태그의 첫번째 자식, div첫번째 자식이 파랑색으로 됨 */
+        /* 이제는 div태그 첫번째에 span태그가 추가가 되었기 때문에 파랑색으로 변하지 않음 */
+        color: blue;
+    }
+    P:last-child{
+        /* 얘도 p태그의 마지막이 더이상 p태그가 아닌 span태그와 div태그가 되었기 때문에 빨강색으로 변하지 않는다. */
+        color:red;
+    }
+
+    /* 처음만나는 p태그 */
+    p:first-of-type{
+        color:aquamarine;
+    }
+
+    /* p의 마지막으로 만난 p태그 값 */
+    p:last-of-type{
+        color: blueviolet;
+    }
+    /* 
+    p:nth-child(2){
+        body의 2번째 자식은 div이기떄문에 적용 안되고, div의 두번째 자식은 p태그이기 때문에 노랑색 배경이 적용이 된다. 
+        background-color: yellow;
+    } 
+    */
+
+    p:nth-of-type(2){
+        /* p에서 두번째로 나오는 얘의 배경색을 정하겠다라는 뜻 */
+        background-color: green;
+    }
+
+    /* p:nth-last-child(1){뒤에서 처음 만나는 값이 p일때만 적용되는 p의 값}
+    p:nth-last-of-type(1){뭐가 있는 뒤에서 처음만나는 p의 값} */
+
+
+</style>
+</head>
+<body>
+<div>first-div</div>
+<div>2-div</div>
+<p>Lorem ipsum dolor sit amet.</p>
+<p>Corrupti deserunt laudantium voluptate obcaecati!</p>
+
+<div>
+    <span>111</span>
+    <p>Dolores culpa modi voluptatibus magnam!</p>
+    <p>Eligendi delectus aliquam temporibus mollitia.</p>
+    <span>999</span>
+</div>
+
+<p>Delectus obcaecati fugiat libero harum.</p>
+
+<div>lastdiv</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>"2023. 4. 24.-오후 12:08:30"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+    h3, pre{
+        background-color: red;
+    }
+
+    /* div안에 있는 p태그를 의미한다. */
+    div p{ /*만약 div > p 라고 줬으면 section안에 있는 p는 직계자손이 아니기 때문에 포함되지 않지만, 그냥 공백을 줬기 때문에 후손인 section안에 있는 p태그도 가능하다.*/
+        background-color: red;
+    }
+
+    /* div + p{ 
+        1.이것만 허용
+    }
+
+    div ~ p{
+        1., 2. 이거 두개다 허용 
+    } */
+</style>
+</head>
+<body>
+    <pre>
+        [css 결합자]
+        선택자(공백)선택자  -   후손
+        선택자 > 선택자   - 직계자손
+        선택자 + 선택자   - 인접한 형제
+        선택자 ~ 선택자   - 일반 형제
+    </pre>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+    <div>
+      <p>Lorem.</p>
+      <p>Blanditiis.</p>
+      <section>
+         <p>Lorem ipsum dolor sit amet.</p>
+      </section>
+    </div>
+    
+    <p>1.  + Delectus ab quas cumque provident iste quos aliquam.</p>
+    <p>2. Delectus ab quas cumque provident iste quos aliquam.</p>
+    
+    <section>
+      section
+    </section>
+    
+    <p>3. Delectus ab quas cumque provident iste quos aliquam.</p>
+</body>
+</html>

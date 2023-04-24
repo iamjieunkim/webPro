@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>"2023. 4. 24.-오후 4:18:17"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+    button{
+        background-color: red;
+    }
+    /* 
+    :의사클래스를 사용하지 않고, js와 jquery를 이용해서 구현하겠다.
+    button:hover{
+        background-color: blue;
+    } */
+</style>
+</head>
+<body>
+<button>마우스 롤오버효과</button>
+<button>마우스 롤오버효과</button>
+<button>마우스 롤오버효과</button>
+
+<script>
+    //jquery 처리
+    /*
+    $("button").click(function () {
+        alert("aaa")
+    })
+    */
+    /*
+    $("button").mouseover(function(){
+        //event.srcElement
+        $(this).css("background-color", "yellow");
+    });
+    $("button").mouseout(function(){
+        //event.srcElement
+        $(this).css("background-color", "red");
+    });
+    */
+
+    //체이닝
+    /*
+    $("button")
+            .mouseover(function(){
+                $(this).css("background-color", "yellow");
+            })
+            .mouseout(function(){
+                $(this).css("background-color", "red");
+            });
+    */
+    //메소드()니까 다 ()괄호라고 생각하면 된다.
+    //hover()는 jquery 함수이기 때문에 ()이다.
+    $("button").hover(
+    function(){
+        $(this).css("background-color", "yellow");
+    }
+    ,function(){
+        $(this).css("background-color", "red");
+    }
+   );
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>"2023. 4. 24.-오후 4:18:17"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+    button{
+        background-color: red;
+    }
+    /* 
+    :의사클래스를 사용하지 않고, js와 jquery를 이용해서 구현하겠다.
+    button:hover{
+        background-color: blue;
+    } */
+</style>
+</head>
+<body>
+<button>마우스 롤오버효과</button>
+<button>마우스 롤오버효과</button>
+<button>마우스 롤오버효과</button>
+
+<script>
+    //js 처리
+    // 객체를 밑에형식처럼 얻어왔었다. 
+    //1. document.getElementById("아이디명")
+    //2. document.querySelector("#아이디명")
+    // 근데 이거는 하나씩만 얻어온다.(조건에 만족하는 첫번째 버튼만 돌리게 된다.)
+    // 첫 번째 버튼 : document.querySelector("button");
+
+    // 모든 객체를 얻어와서 돌린다.
+    // var btns = document.querySelectorAll("button");
+
+    // 태그 이름이 버튼인 놈들을 모두 가져와서 반환하겠다.
+    var btns = document.getElementsByTagName("button");
+    // alert( btns.legnth ); //3
+
+    // alert( "btn 수:"+btns.legnth ); //3
+
+    for(var i=0; i<btns.length; i++){
+        // btns[i].onclick=function(){
+        //     // alert(i); ***
+        // }
+
+        // mouseover 이벤트
+        btns[i].onmouseover = function () {
+        //     console.log("마우스 오버 이벤트 발생함...")
+        //      js이벤트가 발생할 때 모든 이벤트 정보를 event 객체
+            event.srcElement.style.backgroundColor = "blue";
+        }
+
+        // mouseout 이벤트
+        btns[i].onmouseout = function () {
+            // console.log("마우스 아우트 이벤트 발생함...")
+            event.srcElement.style.backgroundColor = "red";
+        }
+    }//for
+
+</script>
+</body>
+</html>
