@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>"2023. 4. 25.-오후 2:01:20"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+    p{
+        width: 200px;
+        border: 1px solid black;
+    }
+    p.test1{
+        white-space: nowrap;
+        overflow: hidden;
+                    /* 잘라내다 */
+        text-overflow: clip;
+    }
+    p.test2{
+        white-space: nowrap;
+        overflow: hidden;
+                      /* 생략하다 */
+        text-overflow: ellipsis;
+    }
+    p.test2:hover{
+        overflow: visible;
+    }
+    p.test3{
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+</style>
+</head>
+<body>
+<h3>css 텍스트 효과</h3>
+<pre>
+    1. text-overflow
+    2. word-wrap(자동줄바꿈)
+        -하나의 단어가 너무 길어서 너비 보다 오버플로워 발생
+        -강제로 줄 바꿈
+    3. word-break(줄 바꿈 규칙)
+    4. writing-mode(쓰기 모드)
+
+</pre>
+
+<p class="test1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, quod!</p>
+<p class="test2">Repellat dolorum voluptatem beatae illum ad non harum autem ab ckckcvj dkvjckvj ssssskjkfdkjfkdjffk</p>
+<p class="test3">Magnam totam sapiente corporis dolor? Laborum blanditiis voluptatem dolores provident?</p>
+</body>
+</html>

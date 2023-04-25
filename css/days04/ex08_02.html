@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>"2023. 4. 25.-오후 2:16:59"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+    /* 가로쓰기모드 */
+    p.test1{
+        writing-mode: horizontal-tb;
+    }
+    /* 세로쓰기모드 */
+    p.test3{
+        writing-mode: vertical-rl;
+    }
+    p.test2 > span{
+        writing-mode: vertical-rl;
+    }
+</style>
+</head>
+<body>
+<p class="test1">Lorem ipsum dolor sit amet.</p>
+<p class="test2">Sequi<span>lanborum</span>Lorem, ipsum dolor.</p>
+<p class="test3">Lorem ipsum dolor sit amet.</p>
+</body>
+</html>

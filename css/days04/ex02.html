@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>"2023. 4. 25.-오전 9:32:15"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+    /* input{ */
+    /* [type]{ */
+    /* [속성명=속성값] */
+    [type=text] {
+        width: 200px;
+        border: 1px solid red;
+    }
+
+    /* [속성명^=속성값]{ */
+    /* 속성값에 홑따옴표나 쌍따옴표는 생략이 가능하다. */
+    /* a[title="flower"]{ */
+    /* a[title=flower] { */
+    /* ^=는 속성값으로 시작하면~출력하겠다 이런 의미이다. 그래서 아래 예제 처럼 title중에서 flower로 시작하는게 있으면 css스타일 요소를 적용하겠다는 의미이다. */
+    /* a[title^=flower] {  
+        color: red;
+        background-color: yellow;
+    } */
+
+    /* $=예는 속성값으로 끝나는가?를 물어보는거 이다. 그래서 title중에서 flower로 끝나는 모든 것에 css스타일을 적용하겠다는 의미로(admin빼고 적용됨) */
+    /* [title$=flower]{
+        color: red;
+        background-color: aqua;
+    } */
+
+    /* [title*=flower]{
+        color: red;
+        background-color: aqua;
+    } */
+
+    /* 독립된 단어중에 flower가 들어가는 거를 출력하겠다.*/
+    [title~=flower]{
+        color: red;
+        background-color: aqua;
+    }
+
+    
+</style>
+</head>
+<body>
+<h3>속성을 선택자(Selector)로 사용하기</h3>
+<pre>
+    1.[속성명]
+    2.[속성명=속성값]
+    3.[속성명^=속성값]
+    4.[속성명$=속성값]
+    5.[속성명*=속성값]
+    6.[속성명~=속성값]
+    7.[속성명|=속성값]
+
+</pre>
+
+<a href="#" title="klematis flower">naver</a><br>
+<a href="#" title="flower">daum</a><br>
+<a href="#" title="kbsflower">sist</a><br>
+<a href="#" title="kbs-flower">taeyo</a><br>
+<a href="#" title="flowers">admin</a><br>
+<hr>
+<!-- input태그에 type속성이 생략이 되면 기본값은 type="text"이다. -->
+<input>1<br>
+<input>2<br>
+<input type="text">3<br>
+<input type="text">4<br>
+<input type="text">5<br>
+<input type="submit">6<br>
+<input type="reset">7<br>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>"2023. 4. 25.-오후 4:42:54"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        background: red;
+
+        /* 약식     animation:sample 4s linear 3s 3 alternate;   */
+
+        animation-name: sample;
+        animation-duration: 4s;
+        animation-timing-function: linear; /*등속(처음이나 끝이나 같이 주겠다.)*/
+        animation-iteration-count: 3;
+        /* animation-iteration-count: infinite; 무한반복을 하겠다. */
+        animation-direction: alternate; /*alternate 왔다갔다.*/
+        /* 애니메이션 시작전, 종료 후 요소의 스타일 ? */
+        /* forwards :마지막 키프레임 스타일 유지 */
+        /* backwards : 시작 키프레임 스타일 유지 */
+        animation-fill-mode: backwards;
+
+        /* @keyframe sample이 움직이기 위해서는 relative가 되어야 한다. */
+        position: relative;
+    }
+
+    @keyframes sample {
+        /*
+        from {background-color: red;}
+        to {background-color: yellow;}
+        */
+        0% {background-color: red;  left:0 ; top:0; }
+        25% {background-color: green;  left:200px ; top:0; }
+        50% {background-color: blue;  left:200px ; top:200px; }
+        75% {background-color: yellow;  left:0 ; top:200px; }
+        100% {background-color: red;  left:0 ; top:0;}
+    }
+</style>
+</head>
+<body>
+<h3>css 애니메이션</h3>
+<pre>
+    js 또는 Flash를 사용하지 않고도 html 요소에 애니메이션처리가 가능하다.
+    -애니메이션? 
+    하나의 스타일 -> 점차 -> 다른 스타일로 변환되는 것을 애니메이션이라고 한다.
+    -css 속성
+    @keyframes를 통해서 애니메이션 처리를 한다.
+    animation-name
+    animation-duration
+    animation-iterarion-cout
+    animation-direction
+    animation-timing-function
+    animation-fill-mode
+    animation 약식
+
+    -키프레임(keyFrame) ?
+    특정 시간에 가지는 요소의 스타일
+    키프+키프+키프+키프+키프+키프+...
+
+</pre>
+
+<div></div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>"2023. 4. 25.-오전 10:05:07"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+    a{ 
+        /* 태그명에 주는 거는 1점  */
+        color: yellow;
+    }
+    a{
+        /* 점수가 같은 경우에는 나중에 준게 적용된다.(밑에 적용한거 위주로구성) */
+        color: red;
+    }
+    p>a{
+        /* 1+1해서 2점이 된다. */
+        color: green;
+    }
+
+    p>a.button{
+        /* 1+1+10(클래스명) = 12 */
+        color: blue;
+    }
+    #mydiv p>a{
+        /* 100(아이디명) + 1 + 1 점 해서 102점이 된다.  */
+        color: aqua;
+    }
+
+    div #mydiv p > a{
+        /* 1 + 100 + 1 + 1 = 103 */
+        color: aquamarine;
+    }
+
+    a{
+        /* 점수가 높지 않아도 !important;로 예외처리 하도록 구현 하였기 때문에 검은색으로 나오게 된다. */
+        color: black !important;
+    }
+</style>
+</head>
+<body>
+<h3>css의 특이성(특수성)</h3>
+<pre>
+    동일한 요소를 여러개의 css규칙이 적용될 때 운선 순위 결성시 사용되는 특성-> 특이성또는 특수성이라고 한다.
+    특이성은 점수로 정해진다.
+
+    1.인라인식 스타일 시트 적용방법 : 1000점
+    2.
+        *{}    0점
+    태그명, ::의사요소:1점
+    클래스명, 의사클래스명, 속성선택자 : 10점
+    #아이디명                    : 100점
+
+    예)
+    #navbar p#demo             : 100 + 1 + 100
+    {
+        color: red;
+    }
+    #demo{
+        color: blue;           : 100
+    }
+
+    3. 예외
+    !important 규칙 
+    해당 요소의 특정 속성에 대한 모든 이전 스타일 재정의
+</pre>
+
+<p>
+    <a href="#" class="button">button 1</a>
+ </p>
+ 
+ <div id="mydiv">
+    <p>
+       <a href="#" class="button">button 2</a>
+    </p>
+    <p>
+        <!-- 인라인식 스타일 시트 적용방법: 1000점 -->
+       <a href="#" class="button" style="color:black">button 3</a>
+    </p>
+ </div>
+</body>
+</html>

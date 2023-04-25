@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>"2023. 4. 25.-오전 9:01:33"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+    #navlist{
+        position: relative;
+    }
+
+    #navlist li{
+        position: absolute;
+        top: 0;
+        margin: 0;
+        padding: 0;
+
+        list-style-type: none;
+    }
+    #navlist li, #navlist li a{
+        height: 44px;
+        width: 43px;
+        display: block;
+    }
+    li#home{
+        left: 0;
+        background: url("../images/img_navsprites_hover.gif");
+    }
+    li#prev{
+        left: 63px;
+        background: url("../images/img_navsprites_hover.gif");
+    }
+    li#next{
+        left: 129px;
+        background: url("../images/img_navsprites_hover.gif");
+    }
+
+    li#home:hover{
+        background-position: 0 -45px;
+    }
+    li#prev:hover{
+        background-position: -47px -45px;
+    }
+    li#next:hover{
+        background-position: -91px -45px;
+    }
+
+    li#naver{
+        left: 190px;
+        background: url("https://s.pstatic.net/static/www/img/uit/sp_main_947f65.png") 442px 428px;
+    }
+</style>
+</head>
+<body>
+<h3>이미지 스프라이트(image sprites)</h3>
+<pre>이미지 스프라이트?
+    이미지가 통채로 있는데 거기서 선택해서 이미지를 골라쓰는 것
+    단일 이미지에 포함된 이미지의 모음
+    이미지가 많은 경우의 웹 페이지를 로딩하는데 시간이 오래 걸리고 서버의 많은 요청으로 시간이 오래 걸리는 문제를 해결하기 위해서 사용한다.
+
+    "../images/img_navsprites_hover.gif"
+</pre>
+<ul id="navlist">
+    <li id="home"><a href="#"></a></li>
+    <li id="prev"><a href="#"></a></li>
+    <li id="next"><a href="#"></a></li>
+    <li id="naver"><a href="#"></a></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>"2023. 4. 25.-오후 2:27:29"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+    div{
+        width: 300px;
+        height: 100px;
+        background-color: yellow;
+        border: 1px solid black;
+
+        /* 변환 - [이동], 회전, 크기, 기울기 */
+        /* transform: translate(50px, 100px); */
+
+        /* 변환 - 이동, [회전-각도(음수 반시계 방향)], 크기, 기울기 */
+        /* transform: rotate(20deg); */
+
+        /* 변환 - 이동, 회전, [크기-너비, 높이를 늘릴수도/줄일수도], 기울기 */
+        /* transform: scale(0.5, 1.1); */
+        /* 너비만 반으로 줄이겠다. */
+        /* transform: scaleX(0.5); */
+        /* 높이만 조정하겠다. */
+        /* transform: scaleY(1.1); */
+        
+
+        /* 변환 - 이동, 회전, 크기, [기울기] */
+        /* skewX() : 지정된 각도만큼 X축을 따라 요소를 기울린다. */
+        /* transform: skewX(90deg); */
+        /* transform: skewX(45deg); */
+        /* transform: skewY(20deg); */
+        /* transform: skew(20deg); */
+
+                    /* scaleX skewY skewX scaleY translateX, translateY*/
+        transform: matrix(1, -0.3, 0, 1, 0, 0 );
+
+
+        
+    }
+</style>
+</head>
+<body>
+<h3>css의 2D변환 작업</h3>
+<pre>
+    -2D변환 ? 요소 1.이동, 2.회전, 3. 비율조정, 4. 기울기
+    -transform 속성
+
+    이동 - translate()
+    회전 - rotate()
+    비율지정 - scale(), scaleX(), scaleY()
+    기울기 - skew(), skewX(), skewY()
+
+    약식(한번에 할 수 있는 거) - matrix()
+</pre>
+
+<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aperiam culpa, optio beatae nam sapiente, enim soluta sunt debitis deleniti incidunt error! Inventore illo et eaque omnis voluptates vel dicta.</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>"2023. 4. 25.-오전 10:20:12"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+    p{
+        /* 1점(태그명이니까) */
+        width: 200px;
+        height: 200px;
+        border: 1px solid green;
+        padding: 20px;
+    }
+
+    p:first-of-type{
+        background-color: red;
+        border-radius: 15px 50px 30px 5px;
+    }
+
+    p:nth-of-type(2){
+        /* background-color: green; */
+        background: url("../images/paper.gif") left top repeat;
+        border-radius: 0 50%; 
+                    /* 0왼위 50 오아 */
+    }
+
+    p:last-of-type{
+        /* background-color: blue; */
+        border-top-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+</style>
+</head>
+<body>
+<h3>둥근모서리</h3>
+<pre>
+    border-radius 속성
+</pre>
+
+<p>Lorem, ipsum dolor.</p>
+<p>Numquam, repellat nemo!</p>
+<p>Alias, inventore possimus.</p>
+</body>
+</html>
