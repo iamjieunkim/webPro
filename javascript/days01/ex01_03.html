@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>"2023. 4. 26.-오후 3:38:58"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+    /* css에서 작업하는 방법
+    p#demo:hover{
+        1+100+10=111점 
+        color: red;
+        font-size: 35px;
+        border: 1px solid gray;
+    }
+    */
+    
+    .demostyle{
+        color: red;
+        font-size: 35px;
+        border: 1px solid gray;
+    }
+    
+</style>
+</head>
+<body>
+    <h3>ex01_03.html</h3>
+
+    <p id="demo">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Repellendus, voluptatibus iusto ipsa necessitatibus eos sit nostrum, 
+        voluptatem aliquid a iste sint consectetur cupiditate. 
+        Quae repudiandae iusto soluta corporis? Id, aliquam?
+    </p>
+
+<script>
+    //jquery 변경
+    $(document).ready(function(){
+
+        /*
+        $("p#demo").on("mouseout", function(event){
+            $(this).addClass("demostyle");
+        });
+        */
+
+        $("p#demo").mouseover(function(event){
+            // alert("확인");
+            //1번 방법
+            /*
+            $(this).css("color", "red");
+            $(this).css("font-size", "35px");
+            $(this).css("border", "1px solid gray");
+            */
+            /* 체이닝 기법
+            $(this).css("color", "red")
+                    .css("font-size", "35px")
+                    .css("border", "1px solid gray");
+            */
+            
+            /*
+            $(this).css({
+                "color":"red",
+                "font-size":"35px",
+                "border":"1px solid gray"
+            });
+            */
+
+            //2번 방법
+            // addClass()/removeClass()/hasClass()/toggleClass()
+            //$(this).addClass("demostyle");
+
+            //3번 방법
+            // $(this).attr("class", "demostyle");
+            $(this).prop("class", "demostyle");
+
+            
+        });
+        //p에 demo라는 아이디를 가진 태그
+        $("p#demo").mouseleave(function(event){
+            $(this).removeClass("demostyle");
+        });
+
+    });
+</script>
+</body>
+</html>
