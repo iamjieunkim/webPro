@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 28. 오전 11:29:15</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+<h3>js 연산자</h3>
+<pre>
+   1. 산술 연산자    +  -  *   /   %          **
+       증감 연산자   ++   --
+   2. 할당 연산자  =
+       복합할당 연산자 +=  -= *=  /= %=  **=
+   3. 비교 연산자   == ===,   !=   !==   >  <  >=  <=
+   4. 문자열 연산자           +
+   5. 논리 연산자           &&  ||  !
+   6. 비트 연산자           X
+   7. 삼항 연산자          항1 ?  항2  :  항3
+   8. 등등 연산자
+</pre>
+<script>
+   document.write( 5 == "5"   ); // true
+   document.write( 5 === "5"   ); // false    값 + 타입
+   
+   document.write( 3 == 5   ); // false
+   //false
+   // 1) 값 + 타입 비교
+    let x = 5;
+    document.write( x  === 5  ); //  true 
+    
+    document.write( 3 != 5    ); // true    
+    document.write( 3 !== 5    ); // true
+    
+    document.write( 3 > 5    ); // false
+    document.write( 3 < 5   ); // true
+    document.write( 3 >= 5 ); // false
+    document.write( 3 <= 5  ); // true
+</script>
+<hr>
+<script>
+   document.write( 3+5+"<br>"); // 8
+   document.write( 3-5+"<br>"); // -2
+   document.write( 3*5+"<br>"); // 15
+   document.write( 3/5+"<br>"); // 자바X 0.6
+   document.write( 3%5+"<br>");
+   
+   document.write( 3/0+"<br>"); // Infinity (무한대)
+   document.write( 3%0+"<br>"); // NaN     ( Not a Number)
+   
+   document.write( 3.0/0+"<br>"); // Infinity (무한대)
+   document.write( 3.0%0+"<br>"); // NaN     ( Not a Number
+</script>
+<script>
+document.write(   5 ** 2 +"<br>"); //  **   25  ECMA 206 
+// Math 내장 객체 - pow() 함수
+document.write(   Math.pow(5,2) +"<br>"); //  **   25  ECMA 206 
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

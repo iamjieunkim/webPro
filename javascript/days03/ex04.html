@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 28. 오전 10:11:13</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+<pre>
+    1.  js 서버 X  - [ 클라이언트(웹 브라우저)  실행 ]
+    2. js 주석처리       //                  /* ~ */
+    3. js 명령문은 작성된 순서대로 하나씩 실행된다. 
+    4. 각각 실행문 끝에 세미콜론(;)을 추가한다. ( 생략 가능하다. )
+        ( 세미콜론을 찍는 것을 적극 권장 )
+     5. js 대소문자 구분한다.
+     6. js 코딩에서 여러 공백 무시된다. 
+         var x=5;
+         var x = 5; (권장)
+         var y=1+3;
+         var y = 1 + 3; (권장)
+      7. 최고의 가독성을 위해서 80자 이상의 코딩은 행을 바꾼다.
+      8. js 코드 블럭 - 그룹화    
+      9. js 키워드(예약어)
+            abstract	arguments	await*	boolean
+			break	byte	case	catch
+			char	class*	const	continue
+			debugger	default	delete	do
+			double	else	enum*	eval
+			export*	extends*	false	final
+			finally	float	for	function
+			goto	if	implements	import*
+			in	instanceof	int	interface
+			let*	long	native	new
+			null	package	private	protected
+			public	return	short	static
+			super*	switch	synchronized	this
+			throw	throws	transient	true
+			try	typeof	var	void
+			volatile	while	with	yield
+			      
+      10. 	js 값 - 2가지 유형
+           1) 리터럴 : ==  고정된값 ( 3.14, 100 )  'A'  true, false 
+                    "A" == 'A'  문자열   
+                    js   문자열    ' '   " "	
+           2) 변수    
+                - js 변수
+                     1) var   변수명;                 변수
+                        1995~2015 사용
+                        
+                        2015 이후 새로 추가된 키워드
+                     2) let   변수명;                  블럭(지역) 변수  
+                     3) const 	   변수명;           블럭(지역) 상수
+                     4)  변수명   
+                      
+               - java 변수 선언 
+               자료형 변수명 [=초기값];
+               int      age = 20;
+      11. js 변수명을 명명하는 규칙
+             - 첫 문자는 숫자로 시작할 수 없다.
+             - $   _ 사용가능하다.
+             예) 자바 :  firstName   ( lower camel case )
+                              first_name X
+                                
+                      
+</pre>
+<script>
+   /*
+    var a = 10;
+    var b = 20;
+    var c = a + b;
+    document.write( c );
+    */
+    /*
+    let a = 10;
+    let b = 20;
+    let c = a + b;
+    document.write( c );
+    */
+    
+    /*
+    a = 11;
+    b = 22;
+    c = a + b;
+    document.write( c );
+    */
+    
+    const a = 1;
+    const b = 2;
+    let c = a + b;
+    document.write( c );
+</script>
+<script>
+    // 한 줄에 여러 명령문이 세미콜론 구분자로 코딩할 수 있다.
+    var                          x=    5     ;    var y = 10;
+    // document.write( X );  대소문자 구분한다. 
+    // document.getElementById("test").innerHTML        = 	"Hello  World";
+    
+    {
+    	
+    }
+</script>
+</body>
+</html>
