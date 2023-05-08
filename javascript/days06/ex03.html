@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 5. 4. 오후 12:44:17</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+<script>
+   // [ js 날짜 ]  Date
+   // java : Date, Calendar, LocalDate, LocalTime, LocalDateTime 등등
+   var d = new Date();
+   //           현재 시스템의 날짜 + 시간
+   console.log( d );
+   //Thu May 04 2023 14:03:12 GMT+0900 (한국 표준시)
+   // 1. js 날짜 객체 를 생성하는 9가지 방법.
+   //        1) new Date()
+   //        2) new Date( 날짜형식의 문자열 )
+   var d = new Date("2023-01-25");
+   console.log( d );
+   console.log( d.toString() );
+   console.log( d.toDateString() );
+   console.log( d.toISOString() );  // ISO표준 날짜형식의 문자열 반환
+   console.log( d.toLocaleString() );         // 2023. 1. 25. 오전 9:00:00
+   console.log( d.toLocaleTimeString() ); // 오전 9:00:00
+   console.log( d.toLocaleDateString() ); //  2023. 1. 25.
+   /*
+   var d = new Date(year, month);
+   var d = new Date(year, month, day);
+   var d = new Date(year, month, day, hours);
+   var d = new Date(year, month, day, hours, minutes);
+   var d = new Date(year, month, day, hours, minutes, seconds);
+   var d = new Date(year, month, day, hours, minutes, seconds, ms);
+   var d = new Date(year, month, day, hours, minutes, seconds, ms);
+   */
+   // var d = new Date(  1970.1.1 이후 ms  )
+   
+   // 월(month)        0(1월) ~ 11(12월)
+   // var d = new Date(2023, 10, 35);
+   // var d = new Date( 2023 );  // == new Date(  1970.1.1 이후 ms  )
+  // var d = new Date(0);   ==  1970.1.1
+  
+  // d.toString() 문자열 
+</script>
+</body>
+</html>
+
+
+
+
+
+
+

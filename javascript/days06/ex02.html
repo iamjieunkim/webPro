@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 5. 4. 오전 11:27:53</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+<script>
+  //const m = [45, 4, 8, 16, 25];
+  // 1. forEach() 
+  /*
+  m.forEach(function(elt, i, array) {
+  	console.log( elt +" /  " + i  + " / " + array.toString() )
+  })
+  */
+  // 2. map()
+  // 배열의 각 요소에 함수를 실행서 새로운 배열 생성.
+  // m 배열의 각 요소를 * 2를 해서 새로운 배열 생성.
+  /*
+  let n = [];
+  m.forEach(function(elt, i, array) {
+	  n.push(   elt * 2 );
+  } );
+  console.log( n.toString() );
+  */
+  /*
+  let n = m.map(function(elt, i, array) {
+			  	  return elt * 2;
+			  });
+  console.log( n.toString() );
+  */
+  
+  //const m = [45, 4, 8, 16, 25];
+  // 3.  filter() 
+  // [문제] m 배열에서 요소의 값이 18보다 큰 
+  // 요소만을 가지는 새로운 배열 n을 생성한 후 출력.
+  /*
+  let n = [];
+  m.forEach(function(elt, i, array) {
+  	if( elt > 18)  n.push( elt );
+  });
+  */
+  /*
+  let n = m.filter(function(elt, i, array) {
+			  	return elt > 18;
+			  });
+  */
+  /*
+  let n = m.filter((elt)  =>  elt > 18);
+  console.log( n.toString() );
+  */
+  
+  // 12:03 수업 시작~
+  // const m = [45, 4, 8, 16, 25];
+  // 4. reduce()  배열의  각 요소에서 함수를 실행하여
+  //   단일값을 생성(축소)..
+  // 각 요소의 합
+  /*
+  let sum = 0;
+  m.forEach(function(elt, i, array) {
+  	 sum  += elt;
+  });
+  console.log( sum );  // 98
+  */
+  //m.reduce( combine );
+  //m.reduce( combine , init );
+  //m.reduceRight( combine , init );    오른쪽 -> 왼쪽
+  /*
+  let sum = m.reduce(function(sum, elt, i, array) {	 
+  	 return sum + elt;
+  }, 0);
+  console.log( sum );
+  */
+  
+  // 5. every()
+  //     모든 요소가 테스트를 통과하는지 여부 true/false
+  /*
+  const m = [45, 4, 8, 16, 25];
+  // 배열의 모든 요소가 20보다 큰지 여부 체크  true/false
+  let result = m.every(function(elt, i, array) {
+  	return elt >  20;
+  });
+  console.log( result );  // false
+  */
+  
+  // 6. some()   
+  /*
+  const m = [45, 4, 8, 16, 25]; 
+  let result = m.some(function(elt, i, array) {
+  	return elt >  20;
+  });
+  console.log( result );  //  true
+  */
+  
+  // 7. find()
+  //    배열의 요소 중에 조건을 만족하는 첫번째 요소를 찾는 메서드
+  /*
+  const m = [45, 4, 8, 16, 25]; 
+  // let n =  m.find(function(elt, i, array) {
+  let n =  m.findIndex(function(elt, i, array) {   // IE 지원 X
+  	return elt > 20;
+  });
+  console.log( n );
+  */
+  
+  // 8. from()
+  //       길이(length) 속성이 있는 객체에서 배열을 반환하는 메서드
+  /*
+  let text = "hello world~";
+  // console.log( text.length );  // 12
+  let m = Array.from( text );
+  // String -> char [] 변환 toCharArray()
+  // h,e,l,l,o, ,w,o,r,l,d,~  배열
+  console.log(  m.toString() )
+  */
+  
+  // 9. includes()
+  /*
+  const m = ["aaa","bbb","ccc", "ddd"]; 
+  console.log(  m.includes("ccc")  );  // true
+  console.log(  m.includes("xxx")  );  // false
+  */
+  
+  // 10. ES6 추가     배열 확장
+  const m = [1,2,3];
+  const n = [4,5,6];
+  const  s = [7,8,9];
+  // m.concat(n, s)
+  const t = [...m, ...n, ...s];  //   1,2,3,4,5,6,7,8,9
+  console.log( t.toString() );
+  
+  
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

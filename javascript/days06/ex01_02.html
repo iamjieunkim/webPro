@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 5. 4. 오전 11:14:31</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+
+<button>로또 번호  발생기</button>
+<p id="demo"></p>
+
+<script>
+
+$("button").click(function(event) {
+		let lotto =  new Set();
+		while( lotto.size < 6 ){
+			let n = Math.floor(  Math.random() *45 + 1 ); 
+			lotto.add( n );
+		}  		  
+	   	 let content = "<ul>";
+	   	 for (let value of lotto) {
+	   		content += `<li>${ value}</li>`;
+		} 
+	     content += "</ul>";
+	     $("p#demo").html(content);
+});
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+

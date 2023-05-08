@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 5. 4. 오후 3:13:46</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+<input type="text"  value="981203-1700001"   id="rrn" 
+ pattern="\d{6}-\d{7}" maxlength="14" >
+<br>
+<input type="date"  id="birth"  value="1999-09-02">
+<br>
+<br>
+<!-- 문제 제시 ) 주민등록번호 -> 만나이, 세는나이  -->
+<input type="radio"  name="age"  value="1"   id="a_age"  checked="checked"> 만 나이
+<br>
+<input type="radio"   name="age"  value="0"  id="k_age" > 세는 나이
+<br>
+<br>
+<button>나이계산</button>
+
+<p id="demo"></p>
+
+<script>
+  $("button").on("click", function (){ 
+	  let birth = $("#birth").val();
+	  // $("#demo").html( birth );   // "1999-09-02" 
+	  // 세는나이 :    2023 - 2022 + 1
+	  // 만나이    :    2023 - 2022  - 1 (생일이지나지 않은 경우에는 )    
+	  
+	  const b = new Date( birth );
+	  // console.log( b.toLocaleString() );  // 1999. 9. 2. 오전 9:00:00
+	  const t = new Date( 2023, 5-1, 4 , 9, 0, 0, 0);
+	  // console.log( t.toLocaleString() ) // 2023. 5. 4. 오전 9:00:00	  
+	  const byear = b.getFullYear(); // 1999
+	  const tyear = t.getFullYear(); // 2023	  
+	  let content = "";
+	  let age = 0;
+	  if( $("#a_age").prop("checked") ){
+		  // 만나이
+		  age = tyear - byear -  1;  // 생일안지나면 -1,  그외는 0
+		  content += `만 나이 : ${age} 살` ;
+	  }else{
+		  // 세는나이
+		  age = tyear - byear + 1;
+		  content += `세는 나이 : ${age}살` ;
+	  }
+	  
+	  $("#demo").html( content );
+  });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 5. 4. 오후 4:59:27</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+<input type="text">
+<br>
+<button>로또 번호  발생기</button>
+<p id="demo"></p>
+
+<script>
+   $("button").click(function(event) {
+   		let lotto = [];
+   		// 11:02 수업 시작~
+   		// 중복되지않는 1~45 로또번호를 6개 채워넣는 코딩.
+   		while( lotto.length < 6 ){
+   			let n = Math.floor(  Math.random() *45 + 1 );
+   			console.log( n );
+   			// 중복되면 true
+   			// 중복되지않으면 false
+   			if( !isDuplicateLotto( lotto, n ) ) lotto.push( n );
+   		} // while
+   		// 오름차순으로 정렬	
+   		/*
+   	    lotto.sort(function(a, b) {
+   	    	return a - b ;
+   	    })	
+   	    */
+   	    // 람다식
+   	    lotto.sort(   (a,b)=> a-b   );
+   		// 출력
+	   	 let content = "<ul><li>";
+	     content += lotto.join("</li><li>");
+	     content += "</li></ul>";
+	     $("p#demo").html(content);
+   });
+   
+   /*
+   function isDuplicateLotto(lotto, n) {
+	   for (var i = 0; i < lotto.length ; i++) {
+		 if( lotto[i] == n ) return true;
+	  } // 
+	  return false;
+   }
+   */
+   function isDuplicateLotto(lotto, n) {
+	   lotto.every(function(elt, i, array) {
+	   	return elt !=  n;  // 중복되지않으면 true
+	   })
+   }
+</script>
+ 
+ <script>
+    // 1) 기능            : 우편번호 검사
+    // 2) 매개변수    : 우편번호              000-000  또는  00000
+    // 3) 리턴값       : true/ false 
+    function zipcodeCheck(zipcode) {
+		// js 정규 표현식
+		let pattern =   /^(\d{3}-\d{3}|\d{5})$/ ;
+		alert(   pattern.test(zipcode)  )
+	}
+    // java   문자열.matches(패턴)
+    // js       패턴.test(문자열)
+    // zipcodeCheck('123-456');
+    // zipcodeCheck('12345');
+    // zipcodeCheck('123456');  // false
+ </script>
+ 
+<script>
+  // 10:00 제출해 주세요 ~
+  /*
+  	2-1.   배열 m을 선언하고 1~100 사이의 랜덤한 값을 채워 넣고 
+     <p id="demo"></p> 에   ul/li 태그로 출력하는 js 코딩을 하세요.         
+	2-2. 배열의 0 번째 요소에   101 값을 채워넣는 코딩을 하세요 .
+	2-3. 배열의 2 번째 요소 값을 제거하는 코딩을 하세요. 
+	2-4. 배열의 3 번째 요소에 205를 삽입하는 코딩을 하세요.  
+	2-5. 배열의 0 번째 요소값을 제거하고 얻어가는 코딩을 하세요 . 
+	2-6. 배열의 가장 큰값 ,가장 작은값 출력     
+  */
+   
+    // ( 2-1 풀이 )
+    let m = [];  // let m = new Array(); 권장X
+    
+    // 1.0 <= Math.random() *100     +1 < 101.0
+    // 절삭
+    // console.log(  Math.floor(  Math.random() *100 + 1 ) );
+    for (var i = 0; i < 5; i++) {
+		m.push( Math.floor(  Math.random() *100 +1 ) );
+	}
+    
+    // 2-2. 
+    // m[0] = 101;  요소 수정
+    m.unshift( 101 );
+    
+    // 2-3.  0/1/[2]
+    m.splice(2, 1);
+    
+    let content = "<ul><li>";
+    content += m.join("</li><li>");
+    content += "</li></ul>";
+    $("p#demo").html(content);
+    
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 5. 4. 오후 4:08:36</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+select {
+	width: 100px;
+	text-align: center;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+ul {
+	list-style-type: none;
+}
+
+body {
+	font-family: Verdana, sans-serif;
+}
+
+.month {
+	padding: 70px 25px;
+	width: 100%;
+	background: #1abc9c;
+	text-align: center;
+}
+
+.month ul {
+	margin: 0;
+	padding: 0;
+}
+
+.month ul li {
+	color: white;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+.month .prev {
+	float: left;
+	padding-top: 10px;
+}
+
+.month .next {
+	float: right;
+	padding-top: 10px;
+}
+
+.weekdays {
+	margin: 0;
+	padding: 10px 0;
+	background-color: #ddd;
+}
+
+.weekdays li {
+	display: inline-block;
+	width: 13.6%;
+	color: #666;
+	text-align: center;
+}
+
+.days {
+	padding: 10px 0;
+	background: #eee;
+	margin: 0;
+}
+
+.days li {
+	list-style-type: none;
+	display: inline-block;
+	width: 13.6%;
+	text-align: center;
+	margin-bottom: 5px;
+	font-size: 12px;
+	color: #777;
+}
+
+.days li .active {
+	padding: 5px;
+	background: #1abc9c;
+	color: white !important
+}
+</style>
+</head>
+<body>
+<h3>달력(일정관리)</h3>
+    
+<select id="cmbyear" onchange="changeDate()"></select>
+<select id="cmbmonth" onchange="changeDate()"></select>
+<select id="cmbdate"></select>
+<br>
+<br>    
+<div class="month">
+		<ul>
+			<li class="prev" onclick="changeCalendar(-1)">&#10094;</li>
+			<li class="next" onclick="changeCalendar(1)">&#10095;</li>
+			<li>
+			     <span id="month">August</span><br> 
+			     <span id="year"	style="font-size: 18px">2017</span>
+			</li>
+		</ul>
+</div>
+<ul class="weekdays">
+		<li>Su</li>
+		<li>Mo</li>
+		<li>Tu</li>
+		<li>We</li>
+		<li>Th</li>
+		<li>Fr</li>
+		<li>Sa</li>
+</ul>
+<ul class="days">  
+  <li></li>
+  <li></li>
+  <li>1</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li><span class="active">10</span></li>
+  <li>11</li>
+  <li>12</li>
+  <li>13</li>
+  <li>14</li>
+  <li>15</li>
+  <li>16</li>
+  <li>17</li>
+  <li>18</li>
+  <li>19</li>
+  <li>20</li>
+  <li>21</li>
+  <li>22</li>
+  <li>23</li>
+  <li>24</li>
+  <li>25</li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+  <li>29</li>
+  <li>30</li>
+  <li>31</li>  
+</ul> 
+<script>
+  var today = new Date();
+  var tYear = today.getFullYear(); // 2023
+  var tMonth = today.getMonth(); // 0~11 (주의)  5월(4)
+  
+  // cmbyear   년도 1970~2050 option 추가
+  for (var i = 1970; i <=2050;  i++) {
+	$("#cmbyear").append($("<option></option>").text(i));
+	// $("#cmbyear").append($("<option>"+i+"</option>"));
+  }
+  $("#cmbyear").val( tYear );
+  
+  // cmbmonth 월  1~12 option추가
+  for (var i = 1; i <=12;  i++) {
+	$("#cmbmonth").append($("<option></option>").text(i)); 
+  }
+  $("#cmbmonth").val( tMonth +1  );
+  
+  
+</script>
+<script>
+    // 달력그리는 메서드
+    function printCalendar( year, month ){
+    	// <span id="month">August</span><br> 
+	    // <span id="year"	style="font-size: 18px">2017</span>
+	    $("#month").text(month);
+	    $("#year").text(year);
+	    // 1) 2023.1 .1  무슨요일    0(일)~6(토)
+	    let dayOfWeek = getDayOfWeek(year, month, 1);
+	    // 2) 2023.1    마지막 날짜 
+	    let lastDay = getLastDay(year, month);
+	    
+	    // 빈 li
+	    $("ul.days").html("");
+	    for (var i = 0; i < dayOfWeek; i++) {
+			 $("ul.days").append("<li></li>");
+		}
+	    // 1~ 마지막 날짜  li 추가
+	    let outputDay ; 
+	    for (var i = 1; i <= lastDay ; i++) {	    	
+	    	outputDay = new Date(  year, month-1, i );
+	    	
+	    	if( outputDay.toLocaleDateString() == 	today.toLocaleDateString() ){
+	    		//<li><span class="active">10</span></li>
+	    		$("ul.days").append("<li><span class='active'>"+i+"</span></li>");
+	    		/*
+	    		$("ul.days").append(
+	    		    $("<li></li>").append(
+	    		    		     $("<span></span>")
+	    		    		         .addClass("active")
+	    		    		         .text(i)
+	    		    		 )
+	    		);
+	    		*/
+	    	}else{
+	    		$("ul.days").append("<li>"+i+"</li>");
+	    	}
+	    	
+	    	// 
+	    	
+		}
+	    
+	    
+    } 
+    function getDayOfWeek(year, month, date){
+    	let d = new Date(year, month-1, date);    	
+    	return d.getDay();
+    }
+    function getLastDay(year, month){
+    	let d = new Date(year, month);
+    	d.setDate( d.getDate() - 1  );
+    	return d.getDate();
+    }
+    
+    printCalendar( 2023, 5);
+</script>
+<script>
+//cmbdate  보류 :  cmbyear / cmbmonth 에 따라서 1~28,29,30,31\
+var year;
+var month;
+function changeDate(){
+	  year = $("#cmbyear").val();
+	  month = $("#cmbmonth").val();
+	  // console.log( year +" / " + month );
+	  var lastDay = getLastDay(year, month);
+	  
+	  $("#cmbdate").html("");  // 
+	  for (var i = 1; i <=lastDay ; i++) {
+		  $("#cmbdate").append($("<option></option>").text(i)); 
+	  }
+	  
+	  printCalendar(year, month);
+}
+changeDate();
+</script>
+<script>
+  // year , month 전역변수
+  function changeCalendar(  value  ){   // prev -1 , next   1
+	 // alert( typeof month );  string
+	  // "5"+"-1" == "5-1"
+	  month =  Number(month) + value;  // -1, 1 
+	  
+	  if( month == 0 ){
+		  year--;
+		  month = 12;
+	  }else if( month == 13 ){
+		  year++;
+		  month = 1;
+	  }
+	  
+	  $("#cmbyear").val(year);
+	  $("#cmbmonth").val(month);
+	  
+	  changeDate(); // 1~28,31	  
+	  printCalendar(year, month);
+  }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

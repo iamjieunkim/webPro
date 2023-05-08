@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 5. 4. 오전 11:46:28</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+<script>
+
+function test(name, age, gender){
+	/*
+	console.log( name );
+	console.log( age );
+	console.log( gender );
+	*/
+	// arguments 컬렉션
+	for (let arg of arguments) {
+		console.log( arg );
+	}
+}
+
+// test(  '홍길동', 20, '남자'  );
+test(  '홍길동', 20, '남자' , 75.45 );
+// test(  '홍길동', 20 );
+</script>
+</body>
+</html>
+
+
+
+
+
+
