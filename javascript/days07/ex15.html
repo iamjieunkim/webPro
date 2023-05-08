@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<title>2023. 5. 8.-오후 3:41:05</title>
+</head>
+<body>
+<pre>
+	https://www.json.org/json-en.html
+	json
+	1. JSON ( JavaScript Object Notation )
+			 자바스크립트 객체 표기법
+	자바스크립트를 객체화 하는 표기법 xml 보다 가벼워서 요즘 JSON을 더 많이 쓴다.
+	2. 경량의 DATA-교환 형식
+		XML
+		예) 한 가족에 대한 정보를 교환하고 싶다.
+		홍기수/김숙자
+			ㄴ홍길동
+			ㄴ홍인자
+			ㄴ홍찬기
+			
+	3. JSON의 두개의 구조를 기본으로 구성된다.
+		(name+value)한 쌍을 가지는 컬렉션
+	4.JSON 데이터 예시
+	{
+			name     value
+		"문자열이름":값,
+		"문자열이름":"문자열",
+		"문자열이름":[],
+		"문자열이름":true/false,
+		"문자열이름":{},
+		:
+		:
+	}
+	예)
+	//얘는 js의 Object 객체이다.
+	let person = {name:"홍길동", age:20};
+	//얘는 JSON 표기법을 따르는 JSON 데이터이다.
+	let person = '{name:"홍길동", age:20}';
+	//얘는 JSON 표기법을 따르는 JSON 데이터를 js의 Object 객체로 바꾸는 함수가 parse()함수이다.
+	
+	let 가족관계 ='{
+		"할아버지":{"이름":"홍기수", "나이":80},
+		"할머니":{"이름":"김숙자", "나이":76},
+		"장남":"홍길동",
+		"차남":"홍찬기",
+		"장녀":"홍인자",
+	}';
+	alert(typeof 가족관계); object, [string]
+	//JSON 형식으로 된 string -> js 객체 변환
+	const obj = JSON.parse(가족관계);
+	obj.장남
+	obj.할아버지.이름
+</pre>
+</body>
+</html>

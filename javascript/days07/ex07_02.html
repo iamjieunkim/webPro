@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<title>2023. 5. 8.-오후 12:36:23</title>
+</head>
+<body>
+
+<script>
+	//[js Map 객체]
+	//1. key-value 한쌍(엔트리) 저장
+	//2. key 중복 X
+	//3. new Map() 맵 객체 생성
+	const fruits = new Map([
+		["apple", 500],
+		["banana", 300]
+	]); //[[]] 배열안에 배열을 주겠다.
+	
+	fruits.set("orange", 600);
+	fruits.set("orange", 200); //key값이 있는데 새로운 값이 추가되면 마지막에 설정한 값으로 들어간다.
+	
+	console.log(fruits.get("orange"));
+	console.log(fruits.size);
+	
+	//fruits.delete("orange");
+	//console.log(fruits.size);
+	
+	//fruits.clear();
+	//console.log(fruits.size);
+	
+	//fruits.has("orange"); //true/false
+	
+	fruits.forEach(function(value, key, map) {
+		console.log( key + "/" + value);
+	})
+	
+	for ( let entry in fruits.entries()) {
+		console.log(entry); //array 0키 1벨류값
+	}
+	
+	for ( let entry in fruits.entries()) {
+		console.log(entry +"/" + entry[0] +"/"+entry[1]);
+	}
+</script>
+</body>
+</html>

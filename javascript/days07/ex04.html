@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<title>2023. 5. 8.-오전 10:31:49</title>
+</head>
+<body>
+	<h3></h3>
+	<script>
+		//[js boolean :참(true), 거짓(false)]
+		console.log( Boolean( 10> 9 )); //ture
+		console.log( 10 > 9 ); //ture
+		// > >= <= < == !=
+			
+		// *** value가 있는 모든 항목은  js에서는 참(true)이다.
+		//if (100) { //값이 있기 때문에 참으로 인식한다.
+		//if ("hello") { //값이 있기 때문에 참으로 인식한다.
+		//if (3.14) { //값이 있기 때문에 참으로 인식한다.
+		if (-11) { //값이 있기 때문에 참으로 인식한다.
+			alert("참이다.");
+		}
+		
+		//js는 어떤 경우에 거짓이 있는가?
+		let x; //undefined 값이 할당이 되어있지 않는다. -> false
+		if(x) {
+			alert("참");
+		}else{
+			alert("거짓");
+		}
+		
+		let x=0; //let x =-0 js에서는 0이나 -0이라고 주면 false로 인식을 한다. 
+		if(x) {
+			alert("참");
+		}else{
+			alert("거짓");
+		}
+		
+		let x=""; //빈 문자열도 false로 인식한다.
+		if(x) {
+			alert("참");
+		}else{
+			alert("거짓");
+		}
+		
+		let x=null; //변수에 null값을 줘도 false로 인식한다.
+		if(x) {
+			alert("참");
+		}else{
+			alert("거짓");
+		}
+		
+		let x = 10/"hello"; //NaN값일 경우에도 false로 인식한다.
+		if(x) {
+			alert("참");
+		}else{
+			alert("거짓");
+		}
+	</script>
+	
+	<script>
+	 //min~max 랜덤한 정수
+	 
+		function getRndInt(min, max){
+		 return Math.floor(Math.random()*(max-min+1)) + min;
+	 }
+	</script>
+</body>
+</html>

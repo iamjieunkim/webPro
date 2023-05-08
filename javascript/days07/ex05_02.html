@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<title>2023. 5. 8.-오전 11:23:01</title>
+</head>
+<body>
+	<script>
+	//[for in 문]
+	//ㄴ속성을 반복하는 문
+	/*
+	js : 객체(object)의 속성을 반복하는 문
+	for ( var 반복요소 in 배열, 컬렉션) {
+		
+	}
+	*/
+	
+	//속성 : 0,1,2,3,4 인덱스 값
+	let m = [3,5,2,4,1];
+	for(var n in m){
+		console.log(n);
+		console.log(n+"/"+m[n]); //속성값을 얻어오기 위해서는 m[n] 배열,컬랙션[반복요소]꼴로 출력해야 한다.
+	}
+	//속성 : fname, lname, age
+	let person ={fname:"john", iname:"doe", age:30};
+	for(var p in person){
+		console.log(p);
+		console.log(p+"/"+person[p]);
+		
+		//주의사항 : forin 구문은 순서가 정해져 있지 않다!!!
+		//순서가 중요한 반복문일 경우는 : for문, for of 문, Array.forEach()문을 써야 한다.
+	}
+	</script>
+</body>
+</html>

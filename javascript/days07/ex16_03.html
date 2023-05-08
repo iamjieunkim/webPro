@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 5. 8. 오후 4:45:52</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+<pre>
+     js ES6    getter, setter 도입
+</pre>
+<script>
+   let person = {
+		   firstname : "john",
+		   lastname:"Doe",
+		   language:"kr", 
+		   // setter
+		   set lang( lang ){
+			   this.language = lang.toUpperCase();
+		   }, 
+		   get lang( ){
+			   return this.language;
+		   }
+   };
+   
+   // 랭귀지 저장할 때 반드시 대문자로 저장.
+   // person.language = "EN";
+   // person.language = "en";
+   person.lang = "en"; // setter lang 설정.
+   //  console.log( person.language );  // en
+    console.log( person.lang );  // getter
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

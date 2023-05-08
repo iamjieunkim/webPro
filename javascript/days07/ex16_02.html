@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<title>2023. 5. 8.-오후 4:34:07</title>
+</head>
+<body>
+<script>
+	//[중첩된 객체]
+	var person = {
+		name:"admin",
+		age:29,
+		cars:[
+			{name:"BMW", models:["a", "b", "c"]}, //-> 중첩객체라고 한다.
+			{name:"Volve", models:["a", "b", "c"]},
+			{name:"Kia", models:["a", "b", "c"]},
+		]
+	};
+	
+	for( var prop in person){
+		console.log(prop);
+	}
+	
+	//alert(tyoeof person); //object
+	//JSON 객체 변환 -> js 객체 변환
+	//const obj = JSON.parse(가족관계)
+	
+	//js객체 -> JSON 문자열 변환
+	let jsonPerson = JSON.stringify(person);
+	alert(jsonPerson);
+	alert(typeof jsonPerson); //String 
+
+/* 	
+console.log( person.name );
+console.log( person["name"] );
+console.log(person.cars[0].name);
+console.log(person.cars[0].models[0]);
+ */
+ 
+</script>
+</body>
+</html>

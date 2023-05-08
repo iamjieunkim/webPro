@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<title>2023. 5. 8.-오후 2:01:56</title>
+</head>
+<body>
+<h3>js 호이스팅(hosting)</h3>
+<pre>
+호이스팅이란 js에서 코드를 실행하기 전 변수 및 함수 선언이 스코프의 최상단으로 끌어 올려지는 현상을 말한다.
+js에서 변수와 함수를 선언하는 위치와는 상관없이 스코트(scope)의 최상위로 끌여올려지는 것을 뜻한다.
+즉, 변수와 함수를 선언하기 전에도 참조할 수 있다는 뜻이다.
+</pre>
+<script>
+	x=5; //값 대입
+	console.log(x); //5
+	//1.변수를 선언되기 전에 사용할 수 있다.
+	//2.이유? 호이스팅(hosting)
+			//모든 선언을 현재 범위의 맨 위로 이동하는 js 기본동작(처리)를 호이스팅이라고 한다.
+	
+	try {
+		//[확인]
+		//ReferenceError: Cannot access 'y' before initialization
+		//이유? 코드블럭 {}
+		//맨위로 호이스팅은 되지만 선언구문이 올때 까지는 사용할 수 없다.
+		 y="hong";
+		 //console.log(y);
+		 let y;
+		// const y; //caught SyntaxError: Missing initializer in const declaration
+		//에러가 발생하는 이유? const는 선언과 동시에 초기화를 하지 않으면 문법에서 에러가 발생한다.
+		
+	} catch (e) {
+	console.log(e);
+	}
+</script>
+</body>
+</html>

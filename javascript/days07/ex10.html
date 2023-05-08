@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<title>2023. 5. 8.-오후 2:22:53</title>
+</head>
+<body>
+<script>
+	"use strict"; //caught ReferenceError: x is not defined
+	//엄격한모드(use strict)를 사용하게 되면 호이스팅 적용이 안됨, 반드시 변수를 선언을 해야지 사용이 가능하다.
+	//엄격모드 == 반드시 변수를 사용해야 한다.
+	//"엄격한 모드"
+	//ES5에서 새로 추가
+	//"use strict(엄격한)"
+	
+	name="admin";
+	x=30;
+	
+	mytest();
+	
+	
+	var name;
+	console.log(name+"/"+x);
+	
+	function mytest() {
+		"use strict"; //이 함수 안에서만 엄격한 모드를 적용하겠다.(변수를 선언해야지 사용이 가능하다.)
+		alert("mytest");
+	}
+</script>
+</body>
+</html>

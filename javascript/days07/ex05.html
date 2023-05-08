@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<title>2023. 5. 8.-오전 10:42:47</title>
+</head>
+<body>
+<h3>js의 제어문</h3>
+<pre>
+	1. if문
+	2. switch
+	3. for/forEach
+	4. while/do ~while
+</pre>
+정수 : <input type="text" id="n" />
+<br />
+<p id="demo"></p>
+	<script>
+	$("#n").on("keydown", function(event){
+		if(event.which ==13){
+			//if(!$(this).val().trim())"" -> false
+			//js 정규표현식 /^\d+$/ test()
+			//isNaN()
+			let n = Number($(this).val())
+			if(n%2==0){
+				
+			}else{
+				
+			}
+			/* 
+			switch(n%2){
+			case 0:
+				break;
+			case 1:
+				break;
+			}
+			 */
+			 /* $("p#demo").html(content);
+			 content = "";
+			 document.getElementById("demo").innerHTML =content; */
+			 /* 
+			 let sum = 0;
+			 let content = "";
+			 for (var i = 0; i < n; i++) {
+				content += i+ "+";
+				sum += i;
+			}
+			 content += "="+ sum;
+			 
+			 $("#demo").html( content );
+			  */
+			let sum = 0;
+			 let content = "";
+			 let i =1;
+			 while(i<=10) {
+				 content += i + "+";
+				 sum += i;
+				 i++;
+			 }
+			 content += "="+sum;
+			 $("#demo").html( content );
+		}
+	})
+	</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<title>2023. 5. 8.-오후 3:14:49</title>
+</head>
+<body>
+<script>
+	//[js 클래스]
+	//1. js 에서도 class 키워드 사용 (ES6)
+	//2. 항상 constructor() 생성자 메서드 추가
+	//3. 형식
+	/*
+	class className{
+		constructor() {
+			
+		}
+	}
+	*/
+	class Car {
+		//필드
+		//private String name;//자바였다면 이렇게 필드에 선언을 해야하지만 js에서는 이렇게 하지x
+		//private int year; //x
+		constructor(name, year) {
+			this.name = name;
+			this.year = year;
+		}
+		
+		//메서드(얘도 따로 필드는 필요없다.)
+		/*
+		age(year){
+			return year - this.year;
+		}
+		*/
+		age(){
+			const d = new Date();
+			return d.getFullYear() - this.year;
+		}
+		
+		
+	}
+	
+	//생성자의 객체가 생성이 된다.
+	var mycar = new Car("K9", 2020);
+	console.log(mycar.age()); //3
+	
+</script>
+</body>
+</html>

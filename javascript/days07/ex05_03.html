@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<title>2023. 5. 8.-오전 11:31:02</title>
+</head>
+<body>
+<script>
+	//[for of 문]
+	//배열, 문자열, Map, NodeList 등과 같은
+	//객체의 값을 반복하는 문
+	let m = [3,5,2,4,1];
+	let person ={fname:"john", iname:"doe", age:30};
+	
+	for (let x of m) {
+		console.log(x);
+	}
+	
+	let msg = "hello world";
+	for (let p of msg){
+		console.log(p);
+	}
+	
+	//break문
+	//break    레이블명;
+	//제어문을 빠져나올때 사용한다.
+	
+	//continue문
+	//continue  레이블명;
+	//증감식으로 다시 보내는 작업이다.
+	
+	const cars=["bmw", "volve", "ssab", "ford"];
+	
+	/* 
+	OUT:
+	for (var i = 0; i < cars.length; i++) {
+		if (i==2) {
+			break OUT;
+		}
+		console.log(cars[i]);
+	}
+	 */
+	
+	/* 
+	OUT:
+	{
+		console.log(cars[0]);
+		console.log(cars[1]);
+		break OUT; //volve까지만 출력되고 out이 일어남
+		console.log(cars[2]);
+		console.log(cars[3]);
+	} 
+	*/
+	
+	//for - of 문을 사용 - Set/Map
+	m=["aa", "bb", "cc"];
+	const letters = new Set(m);
+	for(let x of letters){
+		console.log(x);
+	}
+</script>
+</body>
+</html>

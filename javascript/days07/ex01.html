@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<title>2023. 5. 8.-오전 9:25:27</title>
+</head>
+<body>
+	<!-- <h3>로또 번호 발생기</h3> -->
+	로또 게임 횟수 선택 : 
+	  <select id="cmbCnt"></select>
+	  
+	  <br>
+	  <button id="lotto">로또 번호 발생기</button>
+	  <p id="demo"></p>
+	  
+	  <script>
+	  let num; //게임횟수
+	  let content;
+	  
+	  $(document).ready(function() {
+	  	for (var i = 1; i <= 20 ; i++) {
+			$("#cmbCnt").append($("<option></option>").text(i));
+		}//for
+		
+		$("button").on("click", function () {
+			num = $("#cmbCnt").val();
+			/* alert(num); */
+			var n;
+			var lottos = []; //2차원배열
+			var lotto;
+			
+			for (var i = 0; i < number; i++) {
+				//lottos[i] = new Set();
+				lottos = new Set();
+				while (lotto.size < 6) {
+					n = Math.floor(Math.random()+45+1)
+					lotto.add(num);
+				}
+				lottos.push(lotto);
+			}//for
+			
+			content = lottos.join("<br>").toString();
+			
+			$("#demo").html(content);
+		});
+		
+	  });
+	  </script>
+</body>
+</html>
